@@ -23,6 +23,7 @@
 
 				<!-- Force disable heap pointer tagging as it's required for Crashlytics NDK version 17.3.0 -->
 				<addAttribute tag="application" name="android:allowNativeHeapPointerTagging" value="false"/>
+				<addAttribute tag="application" name="android:extractNativeLibs" value="true"/>
 			</true>
 		</if>
 	</androidManifestUpdates>
@@ -146,15 +147,16 @@
 								buildTypes {
 									release {
 										firebaseCrashlytics {
+											mappingFileUploadEnabled true
 											nativeSymbolUploadEnabled true
-											strippedNativeLibsDir 'build/intermediates/stripped_native_libs/release/out/lib'
+											strippedNativeLibsDir 'build/intermediates/merged_native_libs/release/out'
 											unstrippedNativeLibsDir 'src/main/jniLibs'
 										}
 									}
 									debug {
 										firebaseCrashlytics {
 											nativeSymbolUploadEnabled true
-											strippedNativeLibsDir 'build/intermediates/stripped_native_libs/debug/out/lib'
+											strippedNativeLibsDir 'build/intermediates/merged_native_libs/debug/out'
 											unstrippedNativeLibsDir 'src/main/jniLibs'
 										}
 									}
