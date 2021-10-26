@@ -68,7 +68,7 @@
 				<if condition="bFirebaseCrashlyticsEnable">
 					<true>
 						<insert>
-							classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
+							classpath 'com.google.firebase:firebase-crashlytics-gradle:2.6.0'
 						</insert>
 					</true>
 				</if>
@@ -76,7 +76,7 @@
 				<if condition="bFirebasePerformanceEnable">
 					<true>
 						<insert>
-							classpath 'com.google.firebase:perf-plugin:1.4.0'
+							classpath 'com.google.firebase:perf-plugin:1.3.4'
 						</insert>
 					</true>
 				</if>
@@ -95,7 +95,7 @@
 					dependencies {
 						implementation 'com.google.android.gms:play-services-games:21.0.0'
 
-						implementation platform('com.google.firebase:firebase-bom:28.3.0')
+						implementation platform('com.google.firebase:firebase-bom:27.0.0')
 						implementation 'com.google.firebase:firebase-analytics'
 				</insert>
 
