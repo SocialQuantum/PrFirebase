@@ -42,7 +42,7 @@
 							-dontwarn com.google.firebase.**
 
 							-keepclassmembers class com.google.firebase.perf.metrics.Trace  {
-								private final java.util.Map customAttributesMap;
+								private final java.util.Map attributes;
 							}
 							]]>
 						</insert>
